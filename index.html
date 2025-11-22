@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>MJL Advocacia | Excelência e Estratégia Jurídica</title>
+    <meta name="description" content="MJL Advocacia - Soluções jurídicas inteligentes em Direito Imobiliário, Família, Sucessões e Empresarial. Atendimento de alto padrão em Porto Alegre." />
+    <meta name="theme-color" content="#080504">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              'xs': '375px',
+            },
+            colors: {
+              mjl: {
+                gold: '#967241',      /* Elegant Bronze/Copper */
+                goldLight: '#B58E58', /* Lighter Bronze */
+                goldDim: 'rgba(150, 114, 65, 0.1)', /* Subtle Bronze Background */
+                dark: '#231712',      /* Deep Coffee/Leather Brown */
+                darker: '#140D0A',    /* Almost Black Brown */
+                light: '#F7F5F2',     /* Warm Cream/Beige (Paper) */
+                gray: '#5C5552',      /* Warm Gray Text */
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Montserrat', 'sans-serif'],
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bounce-slow': 'bounce 3s infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            },
+            boxShadow: {
+              'glow': '0 0 20px rgba(150, 114, 65, 0.2)',
+              'card': '0 10px 30px -5px rgba(35, 23, 18, 0.08)',
+              'card-hover': '0 20px 40px -5px rgba(150, 114, 65, 0.15)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #080504;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #231712;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #967241;
+      }
+      
+      html {
+        scroll-padding-top: 80px;
+      }
+
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+      }
+      
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .delay-100 { transition-delay: 100ms; }
+      .delay-200 { transition-delay: 200ms; }
+      .delay-300 { transition-delay: 300ms; }
+      
+      /* Override to ensure footer has no borders if Tailwind preflight acts up */
+      #footer, #footer * {
+         border-width: 0 !important;
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-mjl-light text-mjl-dark selection:bg-mjl-gold selection:text-white">
+    <div id="root"></div>
+  </body>
+</html>
