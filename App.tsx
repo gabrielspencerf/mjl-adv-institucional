@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -6,10 +6,14 @@ import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import Differentials from './components/Differentials';
 import FAQ from './components/FAQ';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import CookieConsent from './components/CookieConsent';
+import PrivacyModal from './components/PrivacyModal';
 
 const App: React.FC = () => {
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
   
   // Logic to trigger animations on scroll
   useEffect(() => {
@@ -39,12 +43,15 @@ const App: React.FC = () => {
         <Hero />
         <About />
         <Services />
-        <Testimonials />
         <Differentials />
+        <Testimonials />
         <FAQ />
+        <Contact />
       </main>
-      <Footer />
+      <Footer onOpenPrivacy={() => setIsPrivacyOpen(true)} />
       <FloatingWhatsApp />
+      <CookieConsent onOpenPrivacy={() => setIsPrivacyOpen(true)} />
+      <PrivacyModal isOpen={isPrivacyOpen} onClose={() => setIsPrivacyOpen(false)} />
     </div>
   );
 };

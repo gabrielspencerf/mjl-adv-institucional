@@ -30,7 +30,7 @@ const Testimonials: React.FC = () => {
           {TESTIMONIALS.map((item, index) => (
             <div 
               key={index} 
-              className="bg-white p-6 sm:p-8 rounded-sm shadow-lg border-t-4 border-mjl-gold relative group hover:-translate-y-2 transition-transform duration-500 reveal"
+              className="bg-white p-6 sm:p-8 rounded-sm shadow-lg border-t-4 border-mjl-gold relative group hover:-translate-y-2 transition-transform duration-500 ease-out-expo reveal"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="flex items-center justify-between mb-4">
@@ -61,7 +61,7 @@ const Testimonials: React.FC = () => {
 
         <div className="mt-12 text-center reveal delay-200">
           <a href={GOOGLE_MAPS_LINK} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block">
-            <Button variant="outline" fullWidth className="border-white/20 text-white hover:bg-white hover:text-mjl-dark">
+            <Button variant="outline-light" fullWidth>
               Ver todas as avaliações no Google
             </Button>
           </a>

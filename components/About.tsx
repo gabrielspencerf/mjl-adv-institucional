@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPinIcon } from '../constants';
+import { MapPinIcon, IMAGES } from '../constants';
 
 const About: React.FC = () => {
   return (
@@ -9,17 +9,17 @@ const About: React.FC = () => {
         {/* Mission Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20 lg:mb-32">
           <div className="relative order-1 lg:order-1 group reveal">
-            <div className="absolute -top-10 -left-10 w-48 h-48 sm:w-64 sm:h-64 bg-mjl-gold/10 rounded-full blur-3xl group-hover:bg-mjl-gold/20 transition-all duration-700"></div>
+            <div className="absolute -top-10 -left-10 w-48 h-48 sm:w-64 sm:h-64 bg-mjl-gold/10 rounded-full blur-3xl group-hover:bg-mjl-gold/20 transition-all duration-700 ease-out-expo"></div>
             <img 
-              src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop"
+              src={IMAGES.OFFICE_PHOTO}
               alt="Escritório Moderno"
-              className="relative rounded-sm shadow-2xl w-full object-cover aspect-[4/3] z-10 filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
+              className="relative rounded-sm shadow-2xl w-full object-cover aspect-[4/3] z-10 filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 ease-out-expo"
               loading="lazy"
             />
             <div className="hidden sm:block absolute -bottom-6 -right-6 w-48 h-48 bg-mjl-dark z-0"></div>
             
-            {/* Stats Box - Responsive Positioning */}
-            <div className="absolute -bottom-6 right-4 sm:-bottom-8 sm:-right-8 bg-white p-6 sm:p-8 shadow-xl z-20 max-w-[180px] sm:max-w-[220px] border-t-4 border-mjl-gold">
+            {/* Stats Box */}
+            <div className="absolute -bottom-6 right-4 sm:-bottom-8 sm:-right-8 bg-white p-6 sm:p-8 shadow-xl z-20 max-w-[180px] sm:max-w-[220px] border-t-4 border-mjl-gold hover:-translate-y-1 transition-transform duration-500 ease-out-expo">
               <p className="font-heading text-4xl sm:text-5xl text-mjl-dark font-bold">15</p>
               <p className="text-[10px] sm:text-xs text-stone-500 uppercase tracking-widest mt-2 font-bold">Anos de experiência sólida</p>
             </div>
@@ -58,14 +58,14 @@ const About: React.FC = () => {
             <div className="lg:col-span-4">
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 shadow-2xl group max-w-sm mx-auto lg:max-w-none">
                 <img 
-                   src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=1000" 
+                   src={IMAGES.LAWYER_PHOTO}
                    alt="Germano Mejler" 
-                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                   className="w-full h-full object-cover transition-transform duration-1000 ease-out-expo group-hover:scale-105"
                    loading="lazy"
                  />
                  <div className="absolute inset-0 bg-gradient-to-t from-mjl-dark via-transparent to-transparent opacity-90"></div>
                  <div className="absolute bottom-0 left-0 p-6 w-full">
-                    <div className="h-1 w-12 bg-mjl-gold mb-4"></div>
+                    <div className="h-1 w-12 bg-mjl-gold mb-4 transition-all duration-500 ease-out-expo group-hover:w-24"></div>
                     <p className="text-white font-heading font-bold text-2xl">Germano Mejler</p>
                     <p className="text-mjl-gold text-xs uppercase tracking-widest mt-1 font-medium">Sócio Fundador</p>
                  </div>
@@ -84,11 +84,11 @@ const About: React.FC = () => {
                    </p>
                 </div>
                 <div className="space-y-6 sm:space-y-8">
-                  <div className="border-l border-mjl-gold pl-6 hover:pl-8 transition-all duration-300">
+                  <div className="border-l border-mjl-gold pl-6 hover:pl-8 transition-all duration-500 ease-out-expo">
                     <h4 className="text-white font-heading font-bold text-lg mb-2">Expertise</h4>
                     <p className="text-sm text-stone-400">Direito Empresarial, Imobiliário e Gestão Patrimonial.</p>
                   </div>
-                  <div className="border-l border-mjl-gold pl-6 hover:pl-8 transition-all duration-300">
+                  <div className="border-l border-mjl-gold pl-6 hover:pl-8 transition-all duration-500 ease-out-expo">
                     <h4 className="text-white font-heading font-bold text-lg mb-2">Abordagem</h4>
                     <p className="text-sm text-stone-400">Negociação assertiva e foco em resultados práticos.</p>
                   </div>

@@ -1,13 +1,15 @@
+import React from 'react';
+
 export interface ServiceItem {
   title: string;
   items: string[];
-  icon: React.FC<any>;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
 export interface DifferentialItem {
   title: string;
   description: string;
-  icon: React.FC<any>;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
 export interface FAQItem {
