@@ -14,7 +14,7 @@ import PrivacyModal from './components/PrivacyModal';
 
 const App: React.FC = () => {
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
-  
+
   // Logic to trigger animations on scroll
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
